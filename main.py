@@ -19,6 +19,8 @@ def send_message(message):
     response = requests.post(url, params=params)
 
 while True:
-    re = requests.get('https://coinyep.com/api/v1/?from=TON&to=USD&lang=ar&format=json').json()['price']
-    send_message(f'{re}$')
+    text = requests.get('https://www.okx.com/ar/convert/ton-to-usd').text
+    dd =text.split('اليوم TON إلى USD هو')[1]
+    rr = dd.split('."}},{"@type"')[0]
+    send_message(f'{rr}')
     time.sleep(300) # 600 seconds = 5 minutes
