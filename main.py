@@ -1,4 +1,6 @@
 import requests
+import os
+os.system('pip install time')
 import time
 
 api_key = '7077041742:AAGueuEPoethOJ2U2BFCbYVfyKVqYmBqX1k'
