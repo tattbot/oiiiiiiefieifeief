@@ -19,8 +19,9 @@ def send_message(message):
     response = requests.post(url, params=params)
 
 while True:
+    time.sleep(300) # 600 seconds = 5 minutes
     text = requests.get('https://www.okx.com/ar/convert/ton-to-usd').text
     dd =text.split('اليوم TON إلى USD هو')[1]
     rr = dd.split('."}},{"@type"')[0]
     send_message(f'{rr}')
-    time.sleep(300) # 600 seconds = 5 minutes
+
