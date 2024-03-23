@@ -1,6 +1,10 @@
 import requests
-import os
-os.system('pip install time')
+try:
+ import time
+except ModuleNotFoundError:
+ import os
+ os.system("pip install -r requirements.txt")
+
 import time
 
 api_key = '7077041742:AAGueuEPoethOJ2U2BFCbYVfyKVqYmBqX1k'
